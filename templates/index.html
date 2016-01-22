@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Long polling chat</title>
+  <link rel="stylesheet" href="{{ static_url('css/style.css') }}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="{{ static_url('js/script.js') }}"></script>
+</head>
+<body>
+  <input type="hidden" id="session" value="{{ session }}" />
+  <div class="wrapper">
+    <div class="message-container">
+      <div class="message-input-container">
+        <div id="messages">
+        </div>
+        <div id="message-input-box">
+          <input id="message-text" type="text">
+        </div>
+      </div>
+    </div>
+    <div class="clients-container">
+      <ul>
+        <li><div class="user-circle"></div>{{ session }}</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
