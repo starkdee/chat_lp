@@ -5,24 +5,20 @@
   <title>Long polling chat</title>
   <link rel="stylesheet" href="{{ static_url('css/style.css') }}">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300' rel='stylesheet' type='text/css'>
   <script src="{{ static_url('js/script.js') }}"></script>
 </head>
 <body>
-  <input type="hidden" id="session" value="{{ session }}" />
-  <div class="wrapper">
-    <div class="message-container">
-      <div class="message-input-container">
-        <div id="messages">
-        </div>
-        <div id="message-input-box">
-          <input id="message-text" type="text">
-        </div>
+  <input type="hidden" name="session" id="session" value="{{ session }}">
+  <div id="main-wrapper">
+    <div id="messages-container">
+      <div id="messages-box">
+      </div>
+      <div id="message-input-box">
+        <input type="text" placeholder="Press 'Enter' to send your message..." name="message-text" id="message-text">
       </div>
     </div>
-    <div class="clients-container">
-      <ul>
-        <li><div class="user-circle"></div>{{ session }}</li>
-      </ul>
+    <div id="users-container">
     </div>
   </div>
 </body>
